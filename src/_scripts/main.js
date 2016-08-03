@@ -4,8 +4,8 @@
 'use strict';
 
 import $ from 'jquery';
-import jQuery from 'jquery';
 import 'slick-carousel';
+import 'foundation-sites';
 
 import Link from '../_modules/link/link';
 

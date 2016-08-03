@@ -62,12 +62,17 @@
     "transform": [ "browserify-shim" ]
   },
   "browser": {
-    "slick-carousel": "./node_modules/slick-carousel/slick/slick.js"
+    "slick-carousel": "./node_modules/slick-carousel/slick/slick.js",
+    "foundation-sites": "./node_modules/foundation-sites/js/foundation.core.js"
   },
   "browserify-shim": {
     "slick-carousel": {
       "exports": null,
       "depends": "jquery:$"
+    },
+    "foundation-sites": {
+      "exports": null,
+      "depends": "jquery:jQuery"
     }
   },
   "//": "CUSTOM CONFIGURATION",

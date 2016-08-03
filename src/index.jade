@@ -1,0 +1,32 @@
+extends _layouts/base
+
+include _modules/link/link
+
+block content
+	.container
+		.yeogurt-info
+			h1 Welcome to Yeogurt!
+			p.
+				Take a look at the
+				#[+link({text: 'documentation'})(href='https://github.com/larsonjj/generator-yeogurt#yeogurt-generator---')]
+				and start mixing up something awesome.
+			p
+				img.logo(src="images/yeogurt-swirl.png", width="75px")
+	//- CSS Foundation Zurb 6 is working
+	div.row
+		div.columns.large-3
+			div 1
+		div.columns.large-3
+			div 2
+		div.columns.large-3
+			div 3
+		div.columns.large-3
+			div 4
+	div.foo
+		div
+			div(style="width:100px;height:100px;background-color:red;")
+		div
+			div(style="width:100px;height:100px;background-color:green;")
+		div
+			div(style="width:100px;height:100px;background-color:blue;")
+	code.version v1.5.3

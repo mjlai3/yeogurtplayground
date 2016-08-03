@@ -6,6 +6,7 @@
 import $ from 'jquery';
 import 'slick-carousel';
 import 'foundation-sites';
+import 'foundation-sites/js/foundation.util.mediaQuery.js';
 
 import Link from '../_modules/link/link';
 

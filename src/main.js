@@ -9386,27 +9386,42 @@ $(function () {
 		return false;
 	});
 
-	// Alter twitter share text depending on which button was clicked
-	$('a.addthis_button_twitter').click(function () {
-		if ($(this).hasClass('standard__twitter-quote')) {
-			addthis_share = {
-				passthrough: {
-				    twitter: {
-				        url: decodeURIComponent(window.location.href),
-						text: "\"" + $(this).find('span').text() + "\""
-					}
-				}
-			};
-		} else if ($(this).hasClass('standard__social__container--inner')) {
-			addthis_share = {
-				passthrough: {
-					twitter: {
-						text: 'A Little Dash'
-					}
-				}
-			};
-		}
-	});
+  // Alter twitter share text depending on which button was clicked
+  $('a.addthis_button_twitter').click(function () {
+    if ($(this).hasClass('standard__twitter-quote')) {
+      addthis_share = {
+        passthrough: {
+          twitter: {
+            text: "\"" + $(this).find('span').text() + "\""
+          }
+        },
+        url_transforms: {
+          shorten: {
+            twitter: 'bitly'
+          }
+        },
+        shorteners: {
+          bitly: {}
+        }
+      };
+    } else if ($(this).hasClass('standard__social__container--inner')) {
+      addthis_share = {
+        passthrough: {
+          twitter: {
+            text: 'A Little Dash'
+          }
+        },
+        url_transforms: {
+          shorten: {
+            twitter: 'bitly'
+          }
+        },
+        shorteners: {
+          bitly: {}
+        }
+      };
+    }
+  });
 });
 
 },{"../_modules/footer/footer":2,"../_modules/header/header":3,"../_modules/subscribe/subscribe":4,"foundation-sites":1}]},{},[5])

@@ -19712,16 +19712,42 @@ $(function () {
 		window.location.href = "/listing.html";
 	});
 
-	// Alter twitter share text depending on which button was clicked
-	$('a.addthis_button_twitter').click(function () {
-		addthis_share = {
-			passthrough: {
-				twitter: {
-					text: "\"" + $(this).find('p').text() + "\""
-				}
-			}
-		};
-	});
+  // Alter twitter share text depending on which button was clicked
+  $('a.addthis_button_twitter').click(function () {
+    if ($(this).hasClass('standard__twitter-quote')) {
+      addthis_share = {
+        passthrough: {
+          twitter: {
+            text: "\"" + $(this).find('span').text() + "\""
+          }
+        },
+        url_transforms: {
+          shorten: {
+            twitter: 'bitly'
+          }
+        },
+        shorteners: {
+          bitly: {}
+        }
+      };
+    } else if ($(this).hasClass('standard__social__container--inner')) {
+      addthis_share = {
+        passthrough: {
+          twitter: {
+            text: 'A Little Dash'
+          }
+        },
+        url_transforms: {
+          shorten: {
+            twitter: 'bitly'
+          }
+        },
+        shorteners: {
+          bitly: {}
+        }
+      };
+    }
+  });
 
 	$('.contact__wizard li').click(function () {
 		if ($(this).attr('data-target')) {

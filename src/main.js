@@ -9315,6 +9315,12 @@ $(function () {
 		$('.mobile__search__container--outer').fadeToggle();
 	});
 
+  // Error404 Search Toggle
+  $('.error404__search--button').click(function () {
+    $('.overlay').fadeToggle();
+    $('.mobile__search__container--outer').fadeToggle();
+  });
+
 	// Mobile Subscribe Toggle
 	$('.header__subscribe__link').click(function () {
 		$('.overlay').fadeToggle();
@@ -9365,12 +9371,6 @@ $(function () {
 			}
 		});
 	}
-
-	// Success message for contact form
-	$('.contact__form input[type=submit]').click(function () {
-		$(this).hide();
-		$('.contact__success').show();
-	});
 
 	// expand/collapse mobile menu pillar
 	$('.mobile__menu__button__container.fitness, .mobile__menu__button__container.lifestyle, .mobile__menu__button__container.food').click(function () {

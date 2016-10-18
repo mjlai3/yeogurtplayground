@@ -3056,6 +3056,8 @@ th {
   font-weight: normal;
   font-style: normal;
   font-size: 21px;
+  margin-left: 0.5em;
+  margin-right: 1em;
 }
 
 .mobile__subscribe .subscribe__checkbox__label {
@@ -3090,7 +3092,8 @@ th {
   font-size: 18px;
 }
 
-.subscribe__input {
+.subscribe__input__container .subscribe__input[type="text"],
+.subscribe__input__container .subscribe__input {
   font-family: "Breakers-Regular", "Helvetica Neue", Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -3105,10 +3108,13 @@ th {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   min-height: 47px;
+  height: auto;
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 85.375em) {
-  .subscribe__input {
+  .subscribe__input__container .subscribe__input[type="text"],
+  .subscribe__input__container .subscribe__input {
     font-size: 21px;
   }
 }
@@ -3117,7 +3123,8 @@ th {
   color: #094260;
 }
 
-.subscribe__input--email {
+.subscribe__input__container .subscribe__input--email[type="text"],
+.subscribe__input__container .subscribe__input--email {
   border-radius: 5px 0 0 5px;
   border-right: none;
   width: 100%;
@@ -3150,18 +3157,26 @@ th {
   background-color: #808080;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding: 15px;
+  padding: 0;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   border: 1px solid grey;
   cursor: pointer;
-  font-size: 17px;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
 }
 
+.subscribe__submit input[type="submit"] {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  height: 100%;
+  font-size: 17px;
+  padding: 15px;
+}
+
 @media screen and (min-width: 85.375em) {
-  .subscribe__submit {
+  .subscribe__submit input[type="submit"] {
     font-size: 21px;
   }
 }
@@ -3170,9 +3185,26 @@ th {
   background-color: #5d5d5d;
 }
 
-.mobile__subscribe .subscribe__submit {
+.mobile__subscribe .subscribe__submit input[type="submit"] {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
   font-size: 18px;
-  padding: 10px;
+  padding: 5px 10px;
+  height: 100%;
+}
+
+.mobile__subscribe .subscribe__submit {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .subscribe__title {

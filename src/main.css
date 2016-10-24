@@ -1915,6 +1915,10 @@ th {
   margin: 0 15px;
 }
 
+.header__media__container a:hover, .header__media__container a:focus {
+  text-decoration: none;
+}
+
 .header__search {
   cursor: pointer;
   width: 45px;

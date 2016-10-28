@@ -3024,7 +3024,7 @@ th {
   display: none;
 }
 
-.subscribe__checkbox[type="checkbox"] + label span {
+.subscribe__checkbox[type="checkbox"] + * + label span {
   display: inline-block;
   width: 19px;
   height: 19px;
@@ -3035,8 +3035,8 @@ th {
   border-radius: 5px;
 }
 
-.subscribe__checkbox[type="checkbox"]:checked + label span {
   background-image: url("/global/LittleDash/images/checkbox-tick.png");
+.subscribe__checkbox[type="checkbox"]:checked + * + label span {
   background-size: 120%;
   background-position: center;
   background-repeat: no-repeat;
@@ -3059,6 +3059,7 @@ th {
   font-family: "Breakers-Regular", "Helvetica Neue", Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
+  display: inline-block;
   font-size: 21px;
   margin-left: 0.5em;
   margin-right: 1em;

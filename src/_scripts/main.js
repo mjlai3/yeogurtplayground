@@ -7,6 +7,7 @@ import $ from 'jquery';
 import 'slick-carousel';
 import 'foundation-sites';
 import 'foundation-sites/js/foundation.util.mediaQuery.js';
+import angular from 'angular';
 
 import Link from '../_modules/link/link';
 
@@ -15,5 +16,25 @@ $(() => {
 	console.log('Welcome to Yeogurt!');
 
 	$('.foo').slick(); // Activates slick plugin
+
+	angular.element(document).ready(function () {
+		angular.bootstrap(document, ['Application']);
+	});
+
+	var application = angular.module('Application', []);
+
+	application.controller('ApplicationController', function($scope){
+
+	});
+
+	application.directive('navigation', function(){
+		return{
+			template: '<h1>{{test}}</h1>',
+			restrict: 'E',
+			link: function($scope){
+				$scope.test = 'please work testing'
+			}
+		}
+	})
 });
 

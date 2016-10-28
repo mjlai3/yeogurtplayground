@@ -6,6 +6,7 @@
     "normalize.css": "~3.0.3"
   },
   "devDependencies": {
+    "angular": "^1.5.8",
     "autoprefixer": "~6.3.1",
     "babel-core": "~6.9.1",
     "babel-eslint": "~6.0.4",
@@ -59,7 +60,9 @@
     "node": ">=0.12.0"
   },
   "browserify": {
-    "transform": [ "browserify-shim" ]
+    "transform": [
+      "browserify-shim"
+    ]
   },
   "browser": {
     "slick-carousel": "./node_modules/slick-carousel/slick/slick.js",

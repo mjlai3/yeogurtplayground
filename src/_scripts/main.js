@@ -27,11 +27,26 @@ $(() => {
 
 	});
 
-	application.directive('navigation', function(){
+	application.directive('navigation', function($http){
 		return{
 			restrict: 'E',
+			scope: {
+				endpoint: '@'
+			},
 			link: function($scope){
 				$scope.test = 'This is a test string'
+				
+				$http.get($scope.endpoint).then(function (response) {
+					$scope.store = response.data;
+
+					angular.forEach($scope.store, function (value, id) {
+						if (value.side == "left") {
+							$scope.leftItems.push(value);
+						} else { 
+							$scope.rightItems.push(value);
+						}
+					})
+				});
 			}
 		}
 	})

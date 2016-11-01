@@ -29,10 +29,9 @@ $(() => {
 
 	application.directive('navigation', function(){
 		return{
-			template: '<h1>{{test}}</h1>',
 			restrict: 'E',
 			link: function($scope){
-				$scope.test = 'please work testing'
+				$scope.test = 'This is a test string'
 			}
 		}
 	})

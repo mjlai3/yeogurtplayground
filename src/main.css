@@ -1740,14 +1740,12 @@ th {
   background-color: #DFDFDF;
   float: left;
   width: 100%;
-  margin-bottom: 3.44827586206897%;
 }
 
 @media screen and (min-width: 40em) {
   .grid-item {
     height: 480px;
     width: 50%;
-    margin-bottom: 1.44827586206897%;
   }
 }
 
@@ -1755,7 +1753,6 @@ th {
   .grid-item {
     height: 480px;
     width: 31.03448275862069%;
-    margin-bottom: 3.44827586206897%;
   }
 }
 

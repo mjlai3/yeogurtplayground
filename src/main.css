@@ -3032,8 +3032,8 @@ th {
   border-radius: 5px;
 }
 
-  background-image: url("/global/LittleDash/images/checkbox-tick.png");
 .subscribe__checkbox[type="checkbox"]:checked + * + label span {
+  background-image: url("/global/LittleDash/images/checkbox-tick.png");
   background-size: 120%;
   background-position: center;
   background-repeat: no-repeat;

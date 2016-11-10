@@ -9349,6 +9349,12 @@ $(function () {
 		$('.overlay').fadeOut();
 	});
 
+	// Open subscribe form when clicking button on mobile
+	$('.subscribe__mobile__btn').click(function () {
+		$(this).next('.subscribe__form').fadeIn();
+		$(this).hide();
+	});
+
 	if ($('.sticky').length) {
 		// make sure ".sticky" element exists
 		var el = $('.sticky');

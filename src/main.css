@@ -1339,7 +1339,7 @@ th {
   }
 }
 
-.contact__form__input, .contact__form textarea, .contact__form textarea:focus {
+.contact__form .contact__form__input, .contact__form textarea, .contact__form textarea:focus {
   font-family: "Breakers-Light", "Helvetica Neue", Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -1353,11 +1353,12 @@ th {
   border: 2px solid #abd1e6;
   border-radius: 5px;
   margin-top: 25px;
+  height: auto;
 }
 
 .contact__form textarea, .contact__form textarea:focus {
   padding-top: 10px;
-  height: 400px;
+  height: 400px !important;
   margin-bottom: 0;
 }
 

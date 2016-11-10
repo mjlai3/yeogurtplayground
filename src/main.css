@@ -1231,7 +1231,6 @@ th {
 @media screen and (min-width: 64em) {
   .article__more {
     width: auto;
-    margin-top: 0;
   }
 }
 
@@ -2406,6 +2405,8 @@ th {
   height: auto;
   padding: 15px;
   border-radius: 4px;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .mobile__subscribe__close {
@@ -3017,6 +3018,16 @@ th {
   background-color: rgba(88, 162, 209, 0.8);
 }
 
+.subscribe__form {
+  display: none;
+}
+
+@media screen and (min-width: 64em) {
+  .subscribe__form {
+    display: block;
+  }
+}
+
 .subscribe__checkbox[type="checkbox"] {
   display: none;
 }
@@ -3039,6 +3050,28 @@ th {
   background-repeat: no-repeat;
 }
 
+.subscribe__checkbox__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 30em) {
+  .subscribe__checkbox__container {
+    display: block;
+  }
+}
+
 .mobile__subscribe .subscribe__checkbox__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3049,6 +3082,10 @@ th {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .subscribe__checkbox__label {

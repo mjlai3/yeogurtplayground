@@ -2101,6 +2101,12 @@ th {
 
 @media screen and (min-width: 64em) {
   .mobile__menu__close__container {
+    margin: 45px 10px;
+  }
+}
+
+@media screen and (min-width: 85.375em) {
+  .mobile__menu__close__container {
     margin: 75px 10px;
   }
 }
@@ -2115,6 +2121,12 @@ th {
 
 @media screen and (min-width: 64em) {
   .mobile__menu__close__text {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 85.375em) {
+  .mobile__menu__close__text {
     font-size: 28px;
   }
 }
@@ -2126,6 +2138,12 @@ th {
 }
 
 @media screen and (min-width: 64em) {
+  .mobile__menu__close__icon {
+    width: 33px;
+  }
+}
+
+@media screen and (min-width: 85.375em) {
   .mobile__menu__close__icon {
     margin-left: 0;
     width: auto;
@@ -2219,6 +2237,14 @@ th {
 
 @media screen and (min-width: 64em) {
   .mobile__menu__button__text {
+    font-size: 26px;
+    padding: 8px 0 0 10px;
+    height: 58px;
+  }
+}
+
+@media screen and (min-width: 85.375em) {
+  .mobile__menu__button__text {
     font-size: 32px;
     padding: 10px 0 0 10px;
     height: 68px;
@@ -2255,6 +2281,12 @@ th {
 }
 
 @media screen and (min-width: 64em) {
+  .mobile__menu__button__icon__container {
+    height: 58px;
+  }
+}
+
+@media screen and (min-width: 85.375em) {
   .mobile__menu__button__icon__container {
     height: 68px;
   }
